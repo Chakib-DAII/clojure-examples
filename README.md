@@ -32,6 +32,10 @@ you can find some useful links:
 
 [Learning: Exercism](https://exercism.org/tracks/clojure).
 
+[Learning: Maria cloud](https://www.maria.cloud/).
+
+[Learning: Quil](http://quil.info/).
+
 
 ## Requirements
 
