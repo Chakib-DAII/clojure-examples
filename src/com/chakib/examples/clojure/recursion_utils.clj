@@ -1,4 +1,4 @@
-;I am just trying to recreate some that I already did in Java, not 100% recursive
+;I am just trying to recreate some that I already did in Java
 (ns com.chakib.examples.clojure.recursion-utils
   (:gen-class)
   (:require ;;[x.x.x :as x] another requirement example
@@ -27,7 +27,6 @@
       acc
       (recur (rest r) (conj acc (first r))))))
 
-
 (defn reverse-string-recursive
   "Returns input with its characters reversed."
   [^String input]
@@ -53,6 +52,7 @@
     result
     (find-binary (int (/ decimal 2) ) (str (mod decimal 2) result))) ; Recursive call
   )
+
 (defn recursive-summation
   "sum numbers recursively"
   [input]
