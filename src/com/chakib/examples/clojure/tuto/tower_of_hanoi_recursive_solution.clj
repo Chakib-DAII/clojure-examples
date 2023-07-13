@@ -15,11 +15,11 @@
   "recursive solution for tower of hanoi _|_|_|_, it returns a vector"
   [n source target spare]
   (if (= n 1)                                               ; Base Case / stop condition
-    (str "*" source " -> " target)
-    (list                                                   ; Recursive call
-      (string/split (hanoi (dec n) source spare target) "*")                    ; moving from source to spare
-      (str source " -> " target)                    ; moving from source to target
-      (hanoi (dec n) spare target source))))                ; moving from spare to target
+    [(str " " source " -> " target)]
+    (apply conj                                                    ; Recursive call
+      (hanoi-coll (dec n) source spare target)                   ; moving from source to spare
+      (str " " source " -> " target)                  ; moving from source to target
+      (hanoi-coll (dec n) spare target source))))                ; moving from spare to target
 
 (defn -main
   [& args]
@@ -71,13 +71,16 @@
     (println (join hanoi-coll-10))
     (println (count hanoi-coll-10))
     )
-  ;(let [hanoi-coll-20 (hanoi-coll 20 :a :b :c)]
-  ;  (println (join hanoi-coll-20))
-  ;  (println (count hanoi-coll-20))
+  (let [hanoi-coll-20 (hanoi-coll 20 :a :b :c)]
+    (println (join hanoi-coll-20))
+    (println (count hanoi-coll-20))
+    )
+  ;(let [hanoi-coll-100 (hanoi-coll 1000 :a :b :c)]
+  ;  (println (join hanoi-coll-100))
+  ;  (println (count hanoi-coll-100))
   ;  )
-  ;(let [hanoi-coll-100 (hanoi-coll 100 :a :b :c)]
+  ;(let [hanoi-coll-100 (hanoi-coll 5000 :a :b :c)]
   ;  (println (join hanoi-coll-100))
   ;  (println (count hanoi-coll-100))
   ;  )
   )
-
