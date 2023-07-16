@@ -41,15 +41,15 @@ you can find some useful links:
 
 To run this code you need [Leiningen](https://leiningen.org).
 
-These tutorials will work on JDK 6 through 8 (Oracle or OpenJDK).
-
-
-Here also you can find Clojure code examples from
-[RabbitMQ tutorials](https://www.rabbitmq.com/getstarted.html).
+These tutorials will work on JDK 6 through 17 (Oracle or OpenJDK).
 
 ## Code
 
-Code examples are executed via `lein run`:
+Code examples can be executed via `lein run`:
+
+To learn more, visit [Langohr documentation](http://clojurerabbitmq.info) site.
+
+## RabbitMQ
 
 Tutorial one: "Hello World!"
 
@@ -81,4 +81,5 @@ Tutorial six: RPC
     lein run -m rabbitmq.tutorials.rpc-server
     lein run -m rabbitmq.tutorials.rpc-client
 
-To learn more, visit [Langohr documentation](http://clojurerabbitmq.info) site.
+Here also you can find Clojure code examples from
+[RabbitMQ tutorials](https://www.rabbitmq.com/getstarted.html).
