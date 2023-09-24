@@ -17,7 +17,7 @@
     (seq str)))
 (defn anagrams-using-primes
   [^String str ^String str1]
-  (= (reduce * (str->prime-numbers str)) (reduce * (str->prime-numbers str1))))
+  (= (reduce * (str->prime-numbers str)) (reduce * (str->prime-numbers str1)))) ; reduce * over prime numbers lists and checking if the products are equal
 
 (defn -main
   [& args]
