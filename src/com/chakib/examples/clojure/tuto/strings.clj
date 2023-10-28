@@ -7,6 +7,18 @@
 
 (def prime-numbers [2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103])
 
+(defn is-prime?
+  "checking if a number is a prime number or not"
+  [x]
+  (if (<= x 2)
+    (= x 2)
+    (every? false?
+            (for [n (range 2 x)]
+                  (= (mod x n) 0)
+                     )
+    )
+  ))
+
 (defn str->prime-numbers
   "mapping a character to a prime number"
   [str]
@@ -50,5 +62,9 @@
   (println (anagrams-using-primes "car" "arc"))
   (println (anagrams-using-primes "brag" "grab"))
   (println (anagrams-using-primes "no" "test"))
+  (println (is-prime? 2))
+  (println (is-prime? 19))
+  (println (is-prime? 3))
+  (println (is-prime? 4))
   )
 
